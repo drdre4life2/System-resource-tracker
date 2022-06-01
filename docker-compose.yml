@@ -55,10 +55,10 @@ services:
     #         - 'sail-redis:/data'
     #     networks:
     #         - sail
-        healthcheck:
-            test: ["CMD", "redis-cli", "ping"]
-            retries: 3
-            timeout: 5s
+        # healthcheck:
+        #     test: ["CMD", "redis-cli", "ping"]
+        #     retries: 3
+        #     timeout: 5s
     meilisearch:
         image: 'getmeili/meilisearch:latest'
         ports:

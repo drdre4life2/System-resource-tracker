@@ -6,7 +6,6 @@ use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Models\Node;
 use DateTime;
-use Illuminate\Support\Facades\Log;
 
 class Kernel extends ConsoleKernel
 {

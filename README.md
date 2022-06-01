@@ -8,7 +8,10 @@ Records can be created updated and deleted.
 ## Installation guide
 
 - **Clone the repository from github**
-- **Set up the database paramenters in the env file. you can copy env.example to start**
+- **docker-compose up -d**
+- **docker exec app composer install**
+- **cp .env.example .env**
+- **docker-compose exec app php artisan key:generate**
 - **Serve the APPIcation**
 
 ## Cron Job

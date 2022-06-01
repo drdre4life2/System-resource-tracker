@@ -11,7 +11,7 @@ Route::post('welcome', [NodeController::class, 'index']);
 
 
 
-
+//Authenticatiom
 Route::group(['middleware' => 'api'], function($router) {
     Route::group(['prefix' => 'Auth'], function () {
         Route::post('login', [UserController::class, 'login']);
@@ -19,13 +19,14 @@ Route::group(['middleware' => 'api'], function($router) {
         Route::post('refresh-token', [UserController::class, 'refresh']);
     });
 
+    //Users
     Route::group(['prefix' => 'User'], function () {
         Route::post('register', [UserController::class, 'register']);
         Route::post('profile', [UserController::class, 'profile']);
 
     });
 
-
+//Node statistics
     Route::group(['prefix' => 'Node'], function () {
     Route::get('/', [NodeController::class, 'index']);
     Route::post('/create', [NodeController::class, 'create']);
@@ -34,7 +35,6 @@ Route::group(['middleware' => 'api'], function($router) {
     Route::post('update/{node}', [NodeController::class, 'update']);
     });
 
-    Route::get('prune', [PruneController::class, 'prune']);
 
 
 });
